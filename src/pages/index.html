@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TestJob</title>
+  </head>
+  <body>
+  <!-- Project begin -->
+    <div id="app">
+      <div class="overlay"></div>
+      <!-- Header begin -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row no-gutters">
+            <div class="col col-left col-6 col-sm-5 col-lg-4">
+              <a href="index.html" class="header__logo">
+                <img src="/assets/img/logo.svg" alt="logoImg">
+              </a>
+              <a href="index.html" class="header__logo-mob">
+                <img src="/assets/img/logo-mob.svg" alt="logoImg">
+              </a>
+              <div class="tarif-number">
+                <div class="tarif-number__icon">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="2" width="16" height="16" rx="4" fill="#0069FF"/>
+                    <g clip-path="url(#clip0)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.68314 8.00855C2.3684 7.9754 2.05112 8.04054 1.7749 8.19503C1.49869 8.34951 1.2771 8.58576 1.1406 8.87129C1.0041 9.15682 0.95938 9.47762 1.0126 9.78959C1.06581 10.1016 1.21435 10.3894 1.43779 10.6135C1.66123 10.8377 1.9486 10.9871 2.26041 11.0413C2.57222 11.0955 2.89316 11.0517 3.17911 10.9161C3.46506 10.7805 3.70199 10.5596 3.85733 10.2839C4.01267 10.0082 4.07879 9.69108 4.04661 9.37624C4.0112 9.02628 3.85628 8.6992 3.60794 8.45009C3.35959 8.20098 3.033 8.04505 2.68314 8.00855ZM2.6335 10.3427C2.46423 10.3654 2.29209 10.3345 2.14128 10.2543C1.99048 10.1741 1.86859 10.0487 1.79274 9.8957C1.71689 9.74267 1.6909 9.56972 1.71842 9.40116C1.74594 9.2326 1.82559 9.0769 1.94617 8.95594C2.06675 8.83498 2.2222 8.75485 2.39067 8.7268C2.55915 8.69875 2.73218 8.7242 2.88544 8.79957C3.0387 8.87494 3.1645 8.99644 3.24514 9.14699C3.32579 9.29755 3.35723 9.46959 3.33505 9.63893C3.31178 9.81706 3.23043 9.98254 3.10361 10.1098C2.97678 10.237 2.81155 10.3188 2.6335 10.3427ZM4.86595 8.06916C4.81282 8.06928 4.76039 8.08125 4.71247 8.1042C4.66454 8.12714 4.62234 8.16048 4.58892 8.20178C4.55551 8.24309 4.53172 8.29133 4.51929 8.34299C4.50687 8.39464 4.50611 8.44842 4.51709 8.50041C4.5507 8.66882 4.70801 8.7839 4.87938 8.7839H5.87384L4.32622 10.832C4.31478 10.8471 4.30777 10.8651 4.30598 10.884C4.3042 10.9028 4.30771 10.9219 4.31612 10.9388C4.32453 10.9558 4.33751 10.9702 4.3536 10.9802C4.36969 10.9902 4.38826 10.9956 4.40722 10.9957H6.83481C7.00606 10.9957 7.16349 10.8806 7.1971 10.7122C7.20808 10.6602 7.20733 10.6064 7.19491 10.5548C7.1825 10.5031 7.15873 10.4549 7.12533 10.4136C7.09193 10.3723 7.04974 10.3389 7.00183 10.316C6.95392 10.293 6.9015 10.281 6.84838 10.2809H5.6367L7.18313 8.23439C7.19469 8.21912 7.20176 8.20094 7.20356 8.18187C7.20536 8.16281 7.20181 8.14362 7.19331 8.12646C7.18481 8.1093 7.1717 8.09485 7.15545 8.08473C7.13919 8.07461 7.12044 8.06921 7.10129 8.06916H4.86595ZM14.5665 8.0774C14.4861 8.09651 14.4146 8.14248 14.3639 8.2077C14.3132 8.27293 14.2863 8.3535 14.2876 8.4361V9.62612L12.3594 8.09163C12.3442 8.07963 12.326 8.07214 12.3068 8.07002C12.2876 8.0679 12.2682 8.07125 12.2509 8.07967C12.2335 8.08809 12.2189 8.10124 12.2086 8.11761C12.1984 8.13399 12.193 8.15292 12.193 8.17222V10.6294C12.1917 10.712 12.2187 10.7925 12.2694 10.8578C12.3201 10.923 12.3915 10.9689 12.4719 10.9881C12.5241 10.9995 12.5782 10.9992 12.6302 10.9869C12.6822 10.9747 12.7308 10.951 12.7725 10.9175C12.8141 10.884 12.8477 10.8415 12.8707 10.7933C12.8937 10.7451 12.9057 10.6923 12.9056 10.6389V9.43858L14.8339 10.9731C14.849 10.9851 14.8672 10.9926 14.8864 10.9947C14.9056 10.9968 14.925 10.9935 14.9423 10.985C14.9597 10.9766 14.9743 10.9635 14.9846 10.9471C14.9948 10.9308 15.0002 10.9118 15.0001 10.8925V8.42644C15.0002 8.37301 14.9883 8.32026 14.9652 8.27206C14.9422 8.22386 14.9086 8.18145 14.867 8.14795C14.8254 8.11445 14.7767 8.09073 14.7247 8.07851C14.6727 8.0663 14.6186 8.06592 14.5665 8.0774ZM9.54575 8.71548C10.3614 8.71548 10.9708 9.1465 10.9708 9.53205C10.9708 9.91759 10.3614 10.3486 9.54575 10.3486C8.73014 10.3486 8.12073 9.91759 8.12073 9.53205C8.12073 9.1465 8.73014 8.71548 9.54575 8.71548ZM9.54575 8.00077C8.36519 8.00077 7.40819 8.68635 7.40819 9.53205C7.40819 10.3777 8.36519 11.0633 9.54575 11.0633C10.7263 11.0633 11.6833 10.3777 11.6833 9.53205C11.6833 8.68635 10.7263 8.00077 9.54575 8.00077Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="14" height="3.06452" fill="white" transform="translate(1 8)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="tarif-number__text">
+                  <span>Ozon</span> (№28451)
+                </div>
+              </div>
+            </div>
+            <div class="col col-right col-6 col-sm-7 col-lg-8">
+              <div class="rep-balance">
+                <div class="rep-balance__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6569 2.34313C12.1459 0.832125 10.1369 0 8 0C5.86312 0 3.85406 0.832125 2.34313 2.34313C0.832156 3.85413 0 5.86312 0 8C0 10.1369 0.832156 12.1459 2.34313 13.6569C3.85413 15.1679 5.86312 16 8 16C10.1369 16 12.1459 15.1679 13.6569 13.6569C15.1678 12.1459 16 10.1369 16 8C16 5.86312 15.1678 3.85406 13.6569 2.34313ZM8 15.0625C4.10563 15.0625 0.9375 11.8944 0.9375 8C0.9375 4.10563 4.10563 0.9375 8 0.9375C11.8944 0.9375 15.0625 4.10563 15.0625 8C15.0625 11.8944 11.8944 15.0625 8 15.0625Z" fill="#EA5DBB"/>
+                    <path d="M8.50226 7.53129H7.49807C6.92598 7.53129 6.46057 7.06589 6.46057 6.49382C6.46057 5.92173 6.92601 5.45632 7.49807 5.45632H9.50641C9.76529 5.45632 9.97516 5.24645 9.97516 4.98757C9.97516 4.7287 9.76529 4.51882 9.50641 4.51882H8.46891V3.48132C8.46891 3.22245 8.25904 3.01257 8.00016 3.01257C7.74129 3.01257 7.53141 3.22245 7.53141 3.48132V4.51882H7.4981C6.40907 4.51882 5.5231 5.40482 5.5231 6.49382C5.5231 7.58282 6.4091 8.46879 7.4981 8.46879H8.50229C9.07435 8.46879 9.53976 8.93423 9.53976 9.50629C9.53976 10.0784 9.07435 10.5438 8.50229 10.5438H6.49395C6.23507 10.5438 6.0252 10.7537 6.0252 11.0125C6.0252 11.2714 6.23507 11.4813 6.49395 11.4813H7.53141V12.5188C7.53141 12.7777 7.74129 12.9876 8.00016 12.9876C8.25904 12.9876 8.46891 12.7777 8.46891 12.5188V11.4813H8.50226C9.59126 11.4813 10.4772 10.5953 10.4772 9.50629C10.4772 8.41729 9.59126 7.53129 8.50226 7.53129Z" fill="#EA5DBB"/>
+                  </svg>
+                </div>
+                <div class="rep-balance__sum">
+                  9 932.00 <span class="rouble">₽</span>
+                </div>
+                <div class="rep-balance__date">
+                  (Хватит ~ 345 дней)
+                </div>
+                <a href="index.html" class="rep-balance__btn btn">
+                  Пополнить
+                </a>
+              </div>
+              <div class="notification">
+                <div class="notification__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.83333 1.38667V1.81977L8.26201 1.88155C10.2782 2.17213 11.8333 3.9075 11.8333 6V7.85867C11.8333 9.32464 12.4757 10.7092 13.5953 11.6561C13.7505 11.7897 13.8333 11.9739 13.8333 12.1667C13.8333 12.5339 13.5339 12.8333 13.1667 12.8333H2.16667C1.79948 12.8333 1.5 12.5339 1.5 12.1667C1.5 11.972 1.58432 11.7884 1.7322 11.6613C2.8573 10.7094 3.5 9.32509 3.5 7.85867V6C3.5 3.90744 5.05454 2.17213 7.0713 1.88156L7.5 1.81979V1.38667V0.666667C7.5 0.574468 7.57448 0.5 7.66667 0.5C7.75885 0.5 7.83333 0.574468 7.83333 0.666667V1.38667Z" stroke="#5068A5"/>
+                    <mask id="path-2-inside-1" fill="white">
+                      <path d="M7.66808 16C8.87542 16 9.88542 15.1393 10.1174 14H5.21875C5.45075 15.1393 6.46075 16 7.66808 16Z"/>
+                    </mask>
+                    <path d="M7.66808 16C8.87542 16 9.88542 15.1393 10.1174 14H5.21875C5.45075 15.1393 6.46075 16 7.66808 16Z" fill="#5068A5"/>
+                    <path d="M10.1174 14L31.0218 18.2567L36.2326 -7.33333H10.1174V14ZM5.21875 14V-7.33333H-20.8964L-15.6856 18.2567L5.21875 14ZM7.66808 37.3333C19.2361 37.3333 28.8104 29.1167 31.0218 18.2567L-10.7869 9.74329C-9.03952 1.16192 -1.48527 -5.33333 7.66808 -5.33333V37.3333ZM10.1174 -7.33333H5.21875V35.3333H10.1174V-7.33333ZM-15.6856 18.2567C-13.4742 29.1167 -3.89994 37.3333 7.66808 37.3333V-5.33333C16.8214 -5.33333 24.3757 1.16192 26.1231 9.74329L-15.6856 18.2567Z" fill="#5068A5" mask="url(#path-2-inside-1)"/>
+                  </svg>
+                </div>
+                <div class="notification__number">
+                  11
+                </div>
+              </div>
+              <div class="login">
+                <div class="login__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9498 10.0503C12.1874 9.28794 11.2799 8.72353 10.2898 8.38187C11.3502 7.65149 12.0469 6.42914 12.0469 5.04701C12.0469 2.81556 10.2315 1.00012 8.00003 1.00012C5.76858 1.00012 3.95314 2.81556 3.95314 5.04701C3.95314 6.42919 4.64983 7.65154 5.71031 8.38187C4.72019 8.72353 3.8127 9.28794 3.05027 10.0503C1.72814 11.3725 1 13.1303 1 15.0001H2.09375C2.09375 11.7435 4.74329 9.09385 8.00003 9.09385C11.2568 9.09385 13.9063 11.7434 13.9063 15.0001H15.0001C15.0001 13.1303 14.2719 11.3724 12.9498 10.0503ZM8.00003 8.00009C6.37167 8.00009 5.04689 6.67534 5.04689 5.04696C5.04689 3.41858 6.37167 2.09382 8.00003 2.09382C9.62838 2.09382 10.9532 3.41858 10.9532 5.04696C10.9532 6.67534 9.62838 8.00009 8.00003 8.00009Z" fill="#5068A5"/>
+                  </svg>
+                </div>
+                <div class="login__user-name">
+                  Александр
+                </div>
+                <div class="login__user-arrow">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.35355 3.64645C2.15829 3.45118 1.84171 3.45118 1.64645 3.64645C1.45118 3.84171 1.45118 4.15829 1.64645 4.35355L2.35355 3.64645ZM6 8L5.64645 8.35355L6 8.70711L6.35355 8.35355L6 8ZM10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645C10.1583 3.45118 9.84171 3.45118 9.64645 3.64645L10.3536 4.35355ZM1.64645 4.35355L5.64645 8.35355L6.35355 7.64645L2.35355 3.64645L1.64645 4.35355ZM6.35355 8.35355L10.3536 4.35355L9.64645 3.64645L5.64645 7.64645L6.35355 8.35355Z" fill="#5068A5"/>
+                  </svg>
+                </div>
+                <div class="login__user-dropdown">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, fugiat?
+                </div>
+              </div>
+              <div class="header__menu-burger menu-burger">
+                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 4H25" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 12H17" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 20H21" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="menu-burger__body">
+                  <div class="menu-burger__body-close-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.22566 0.810956C1.83514 0.420436 1.20197 0.420436 0.811452 0.810956C0.420922 1.20148 0.420922 1.83465 0.811452 2.22517L6.5862 7.9999L0.811512 13.7746C0.420982 14.1651 0.420982 14.7983 0.811512 15.1888C1.20203 15.5793 1.8352 15.5793 2.22572 15.1888L8.0004 9.4141L13.7751 15.1888C14.1656 15.5793 14.7988 15.5793 15.1893 15.1888C15.5798 14.7983 15.5798 14.1651 15.1893 13.7746L9.4146 7.9999L15.1893 2.22517C15.5799 1.83465 15.5799 1.20148 15.1893 0.810956C14.7988 0.420436 14.1657 0.420436 13.7751 0.810956L8.0004 6.5857L2.22566 0.810956Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, fugiat?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Header end -->
+      <!-- Main section begin -->
+      <div class="content">
+        <section class="lk">
+          <div class="container-fluid">
+            <div class="row no-gutters">
+              <div class="col col-top col-12">
+                <h2 class="lk__title">
+                  Личный кабинет
+                </h2>
+              </div>
+              <div class="col col-bottom col-12">
+                <div class="lk__menu menu ">
+                  <ul class="menu__list">
+                    <li>
+                      <a href="index.html" class="menu__link">
+                        Настройки
+                      </a>
+                    </li>
+                    <li>
+                      <a href="index.html" class="menu__link">
+                        Оплата
+                      </a>
+                    </li>
+                    <li>
+                      <a href="index.html" class="menu__link">
+                        Уведомления
+                      </a>
+                    </li>
+                    <li>
+                      <a href="index.html" class="menu__link">
+                        Партнерская программа
+                      </a>
+                    </li>
+                    <li>
+                      <a href="index.html" class="menu__link">
+                        Обучение
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="lk__menu-arrow menu__arrow ">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.35355 3.64645C2.15829 3.45118 1.84171 3.45118 1.64645 3.64645C1.45118 3.84171 1.45118 4.15829 1.64645 4.35355L2.35355 3.64645ZM6 8L5.64645 8.35355L6 8.70711L6.35355 8.35355L6 8ZM10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645C10.1583 3.45118 9.84171 3.45118 9.64645 3.64645L10.3536 4.35355ZM1.64645 4.35355L5.64645 8.35355L6.35355 7.64645L2.35355 3.64645L1.64645 4.35355ZM6.35355 8.35355L10.3536 4.35355L9.64645 3.64645L5.64645 7.64645L6.35355 8.35355Z" fill="#5068A5"/>
+                    </svg>
+                  </div>
+                  <div class="lk__menu-dropdown ">
+                    <nav class="dropdown-menu-lk">
+                      <ul class="dropdown-menu-lk__list">
+                        <li>
+                          <a href="index.html" class="dropdown-menu-lk__link">
+                            Настройки
+                          </a>
+                        </li>
+                        <li>
+                          <a href="index.html" class="dropdown-menu-lk__link">
+                            Оплата
+                          </a>
+                        </li>
+                        <li>
+                          <a href="index.html" class="dropdown-menu-lk__link">
+                            Уведомления
+                          </a>
+                        </li>
+                        <li>
+                          <a href="index.html" class="dropdown-menu-lk__link">
+                            Партнерская программа
+                          </a>
+                        </li>
+                        <li>
+                          <a href="index.html" class="dropdown-menu-lk__link">
+                            Обучение
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="payment">
+          <div class="container-fluid">
+            <div class="payment__body">
+              <div class="row row-top no-gutters">
+                <div class="col col-top col-12">
+                  <h3 class="payment__title section-title">
+                    Оплата
+                  </h3>
+                </div>
+                <div class="col col-bottom col-12">
+                  <nav class="menu ">
+                    <ul class="menu__list">
+                      <li>
+                        <a href="index.html" class="menu__link">
+                          Пополнение баланса
+                        </a>
+                      </li>
+                      <li>
+                        <a href="index.html" class="menu__link">
+                          Детализация расходов
+                        </a>
+                      </li>
+                      <li>
+                        <a href="index.html" class="menu__link">
+                          Тарифы,доп.услуги
+                        </a>
+                      </li>
+                      <li>
+                        <a href="index.html" class="menu__link">
+                          История платежей
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="row row-bottom no-gutters">
+                <div class="col col-12 col-sm-6 col-lg-4">
+                  <div class="payment-col">
+                    <div class="payment-col__header">
+                      <h4 class="payment-col__header-title">
+                        Wildberries — Аналитика
+                      </h4>
+                    </div>
+                    <div class="payment-col__body">
+                      <div class="payment-col__text">
+                        <p >
+                          Анализ заказов, продаж, остатков, товарная аналитика по каждому складу маркетплейса
+                        </p>
+                      </div>
+                      <table class="payment-col__table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Количество товаров</th>
+                            <th scope="col">Месяц</th>
+                            <th scope="col">День</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>до 50</td>
+                            <td>
+                              2&nbsp;370&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              79&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 51 до 100 </td>
+                            <td>
+                              2&nbsp;970&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              99&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 101 до 500</td>
+                            <td>
+                              4&nbsp;470&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                             149&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 501 до 1000</td>
+                            <td>
+                              7&nbsp;470&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              249&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 1001 до 5000</td>
+                            <td>
+                              10&nbsp;470&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              349&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Безлимитный от 5001</td>
+                            <td>
+                              14&nbsp;970&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              499&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-lg-4">
+                  <div class="payment-col">
+                    <div class="payment-col__header payment-col__header-bg2">
+                      <h4 class="payment-col__header-title">
+                        Wildberries — Аналитика
+                      </h4>
+                    </div>
+                    <div class="payment-col__body">
+                      <div class="payment-col__text">
+                        <p >
+                          Анализ заказов, продаж, остатков, товарная аналитика по каждому складу маркетплейса
+                        </p>
+                        <p class="payment-col__text-color">
+                          Добавление страницы в отслеживание — 99q/страница
+                        </p>
+                        <p>
+                          Списывается за уникальную страницу, если вдруг удалили страницу и добавили заново — повторно оплата не снимается
+                        </p>
+                        <p class="payment-col__text-bold">
+                          Ежедневный мониторинг и обновление страниц:
+                        </p>
+                      </div>
+                      <table class="payment-col__table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Количество товаров</th>
+                            <th scope="col">Месяц</th>
+                            <th scope="col">День</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>до 3</td>
+                            <td>
+                              0&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 4 до 10</td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 11 до 20</td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 21 до 50</td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Безлимитный от 5001</td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              0<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-12 col-lg-4">
+                  <div class="payment-col">
+                    <div class="payment-col__header payment-col__header-bg3">
+                      <h4 class="payment-col__header-title">
+                        Wildberries — Аналитика
+                      </h4>
+                    </div>
+                    <div class="payment-col__body">
+                      <div class="payment-col__text">
+                        <p >
+                          Анализ позиций любых товаров на страницах категорий, бренда, поисковых запросов, акций.                        </p>
+                        <p class="payment-col__text-color">
+                          Добавление нового товара — 29q/товар
+                        </p>
+                        <p>
+                          Списывается за уникальный товар, если вдруг удалили товар и добавили заново - повторно оплата не списывается.                        </p>
+                        <p class="payment-col__text-bold">
+                          Ежедневный мониторинг позиций:
+                        </p>
+                      </div>
+                      <table class="payment-col__table">
+                        <thead>
+                        <tr>
+                          <th scope="col">Количество товаров</th>
+                          <th scope="col">Месяц</th>
+                          <th scope="col">День</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>до 20</td>
+                            <td>
+                              870&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              29&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 21 до 100 </td>
+                            <td>
+                              1&nbsp;470&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              49&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 101 до 500</td>
+                            <td>
+                              2&nbsp;970&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              149&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 501 до 1000</td>
+                            <td>
+                              4&nbsp;470&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              149&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>от 1001 до 5000</td>
+                            <td>
+                              8&nbsp;970&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              299&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Безлимитный от 5001</td>
+                            <td>
+                              8&nbsp;970&nbsp;<span class="rouble">₽</span>
+                            </td>
+                            <td>
+                              299&nbsp;<span class="rouble">₽</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="add-services">
+          <div class="container-fluid">
+            <div class="row row-top no-gutters">
+              <div class="col col-top col-12">
+                <h3 class="add-services__title section-title">
+                  Дополнительные услуги:
+                </h3>
+              </div>
+              <div class="col col-bottom col-12">
+                <p class="add-services__description">
+                  Помощь от команды Stat4market, основателя сервиса и партнеров, для увеличения продаж и помощи по работе с маркетплейсом.
+                </p>
+              </div>
+            </div>
+            <div class="row row-bottom no-gutters">
+              <div class="col col-12">
+                <div class="services-col">
+                  <div class="row no-gutters">
+                    <div class="col col-12 col-xl-2">
+                      <img src="/assets/img/services-1.jpg" alt="img" class="services-col__img">
+                    </div>
+                    <div class="col col-body col-12 col-xl-10">
+                      <div class="row no-gutters">
+                        <div class="col col-12 col-xl-9">
+                          <h4 class="services-col__title">
+                            Оптимизация продаж на маркетплейсе
+                          </h4>
+                          <p class="services-col__description">
+                            Наш основной продукт для тех, кто уже продаёт на Wildberries, направленный напрямую на увеличение вашей прибыли от работы с маркетплейсом. В нашем сервисе уже несколько сотен поставщиков и мы понимаем основные ошибки поставщиков, которые тормозят их рост и рычаги увеличения ваших продаж на маркетплейсах. Наша команда и основатель сервиса Дмитрий Бакланов проанализирует ваш бренд, найдут точки роста, оптимизации товаров.Для начала работы необходимо заполнить заявку по ссылке «Заказать».
+                          </p>
+                          <div class="services-col__check">
+                            <div class="services-col__check-icon">
+                              <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 20C0 13.3726 5.37258 8 12 8C18.6274 8 24 13.3726 24 20C24 26.6274 18.6274 32 12 32C5.37258 32 0 26.6274 0 20Z" fill="#A5D274"/>
+                                <path d="M7 19.1739L10.913 23.087L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <p class="services-col__check-text">
+                              Вы получите полное понимание своих дальнейших действий для развития бренда, также чек-лист из более 30 пунктов по улучшениям или проблемам именно вашего бренда для оптимизации, увеличения выручки и прибыли
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col col-order col-12 col-xl-3">
+                          <div class="row no-gutters">
+                            <div class="col col-order-price col-12 col-sm-6 col-xl-12">
+                              <p class="services-col__order-price services-col__order-price-old">
+                                29&nbsp;990&nbsp;<span class="rouble">₽</span>
+                              </p>
+                              <p class="services-col__order-price">
+                                24&nbsp;900&nbsp;<span class="rouble">₽</span>
+                              </p>
+                              <p class="services-col__order-time">
+                                2 часа
+                              </p>
+                            </div>
+                            <div class="col col-order-btn col-12 col-sm-6 col-xl-12">
+                              <a href="index.html" class="services-col__btn btn">
+                                Заказать
+                              </a>
+                              <a href="index.html" class="services-col__btn btn">
+                                Подробнее об услуге
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12">
+                <div class="services-col">
+                  <div class="row no-gutters">
+                    <div class="col col-12 col-xl-2">
+                      <img src="/assets/img/services-2.jpg" alt="img" class="services-col__img">
+                    </div>
+                    <div class="col col-body col-12 col-xl-10">
+                      <div class="row no-gutters">
+                        <div class="col col-12 col-xl-9">
+                          <h4 class="services-col__title">
+                            Помощь в выходе на маркетплейс
+                          </h4>
+                          <p class="services-col__description">
+                            Продукт для тех кто только собирается выйти на Wildberries. Состоит из пошагового плана со всеми этапами выхода на маркетплейс до первой поставки а также 2-х часовая консультация с экспертом, ответы на все вопросы. Необходимо предварительно заполнить заявку по ссылке «Заказать».                          </p>
+                          <div class="services-col__check">
+                            <div class="services-col__check-icon">
+                              <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 20C0 13.3726 5.37258 8 12 8C18.6274 8 24 13.3726 24 20C24 26.6274 18.6274 32 12 32C5.37258 32 0 26.6274 0 20Z" fill="#A5D274"/>
+                                <path d="M7 19.1739L10.913 23.087L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <p class="services-col__check-text">
+                              Вы получите ответы на все вопросы, которые мешают выйти и поставить ваши товары на Wildberries.                            </p>
+                          </div>
+                        </div>
+                        <div class="col col-order col-12 col-xl-3">
+                          <div class="row no-gutters">
+                            <div class="col col-order-price col-12 col-sm-6 col-xl-12">
+                              <p class="services-col__order-price services-col__order-price-old">
+                                9&nbsp;990&nbsp;<span class="rouble">₽</span>
+                              </p>
+                              <p class="services-col__order-price">
+                                4&nbsp;900&nbsp;<span class="rouble">₽</span>
+                              </p>
+                              <p class="services-col__order-time">
+                                2 часа
+                              </p>
+                            </div>
+                            <div class="col col-order-btn col-12 col-sm-6 col-xl-12">
+                              <a href="index.html" class="services-col__btn btn">
+                                Заказать
+                              </a>
+                              <a href="index.html" class="services-col__btn btn">
+                                Подробнее об услуге
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Main section end -->
+    </div>
+  <!-- End begin -->
+  </body>
+</html>

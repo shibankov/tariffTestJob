@@ -1,0 +1,514 @@
+@import '../utils/libs'
+@import '../utils/reset'
+
+@import 'variables'
+@import 'mixins'
+
+//Базовые стили
+html
+  scroll-behavior: smooth
+html, body
+  min-height: 100%
+  height: 100%
+  width: 100%
+body
+  height: auto
+  font-family: $font
+  @include adaptive-font(16,14)
+  color: $fontcolor
+  background: $bodyBgColor
+*,
+*:before,
+*:after
+  box-sizing: border-box
+a
+  &:hover,:active,:target,:focus
+    text-decoration: none
+button
+  outline: none
+  background: transparent
+  &:hover,&:focus,&:active
+    outline: none
+    background: transparent
+
+/*Новые стили для скролла*/
+::-webkit-scrollbar
+  width: 4px
+  height: 4px
+  border-radius: 5px
+  background-color: #C4C4C4
+::-webkit-scrollbar-thumb
+  border-radius: 10px
+  position: relative
+  background: $scrollbarColor
+
+//Основные стили
+#app
+  display: flex
+  flex-direction: column
+  //width: 100%
+  min-height: 100vh
+  height: 100%
+  overflow-x: hidden
+.overlay
+  display: none
+  position: fixed
+  top: $headerHeight
+  left: 0
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  background: rgba(0,0,0,.25)
+  z-index: 1
+  &.fade-in-overlay
+    display: block
+.content
+  flex: 1 1 auto
+  padding-bottom: 30px
+  @media only screen and (min-width: 1200px)
+    padding-bottom: 60px
+.stop-scroll
+  overflow: hidden
+.btn
+  //display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding: 4px 16px
+  font-size: 13px
+  font-weight: 400
+  color: $btnColor
+  border-radius: 4px
+  background: $btnBgColor
+  transition: all .3s ease-in-out .1s
+  &:hover
+    color: $btnBgColor
+    border: 1px solid $btnBgColor
+    background: transparent
+    transition: all .4s ease-in-out
+  &:focus
+    box-shadow: none
+
+//Bootstrap grid
+.container-fluid
+  max-width: 1980px
+  @media only screen and (min-width: 1200px)
+    padding: 0 40px
+
+//Секция: "Личный кабинет"
+.lk
+  margin-top: ($headerHeight + 29px)
+  &__title
+    font-size: 20px
+    font-weight: 600
+    color: $siteBlack
+    @media only screen and (min-width: 767px)
+      font-size: 30px
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
+    @media only screen and (min-width: 992px)
+      text-shadow: none
+  &__menu
+    position: relative
+    &-arrow
+      svg
+        transition: all .2s ease-in-out .1s
+      &.fade-in
+        svg
+          transform: rotate(180deg)
+          transition: all .3s ease-in-out
+    &-dropdown
+      position: absolute
+      top: 50px
+      right: 0
+      width: 100%
+      min-height: 100px
+      z-index: 1
+      display: none
+      padding: 16px
+      border: 1px solid #D8DCE9
+      border-radius: 4px
+      background: #ffffff
+      box-shadow: 0px 5px 10px rgba(186, 192, 209, 0.2)
+      .dropdown-menu-lk
+        &__list
+          display: flex
+          flex-direction: column
+          li
+            &:not(:last-child)
+              margin-bottom: 8px
+        &__link
+          font-size: 12px
+          line-height: 16px
+          color: #333
+          transition: all .3s ease-in-out .1s
+          &:hover
+            color: lighten(#333,35%)
+            transition: all .4s ease-in-out
+      &.fade-in
+        display: flex
+  .menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 16px
+    border: 1px solid #D8DCE9
+    border-radius: 4px
+    background: #fff
+    @media only screen and (min-width: 767px)
+      padding: 0
+      border: none
+      background: transparent
+    &__arrow
+      cursor: pointer
+      @media only screen and (min-width: 767px)
+        display: none
+    &__list
+      display: flex
+      align-items: center
+      li
+        &:not(:first-child)
+          display: none
+          @media only screen and (min-width: 767px)
+            display: flex
+        &:not(:last-child)
+          @media only screen and (min-width: 767px)
+            margin-right: 16px
+    &__link
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 12px
+      font-weight: 400
+      text-align: center
+      color: $fontcolor
+      border-radius: 4px
+      transition: all .3s ease-in-out .1s
+      &:hover
+        transition: all .4s ease-in-out
+      @media only screen and (min-width: 767px)
+        padding: 10px 16px
+        font-size: 14px
+        color: $btnBgColor
+        border: 1px solid $btnBgColor
+        &:hover
+          background: $btnBgColor
+          color: #fff
+  .col
+    margin-bottom: 16px
+    @media only screen and (min-width: 767px)
+      margin-bottom: 24px
+
+//Секция: "Оплата"
+.section-title
+  font-size: 16px
+  font-weight: 600
+  color: $siteBlack
+  @media only screen and (min-width: 767px)
+    font-size: 18px
+  @media only screen and (min-width: 992px)
+    font-size: 24px
+.payment
+  margin-bottom: 16px
+  @media only screen and (min-width: 767px)
+    margin-bottom: 24px
+  &__body
+    padding: 16px
+    background: #ffffff
+    border-radius: 8px
+    @media only screen and (min-width: 1200px)
+      padding: 30px
+  .row-top
+    .col
+      &-top
+        margin-bottom: 16px
+        @media only screen and (min-width: 767px)
+          margin-bottom: 24px
+      &-bottom
+        margin-bottom: 16px
+        @media only screen and (min-width: 992px)
+          margin-bottom: 32px
+  .row-bottom
+    .col
+      @media only screen and (min-width: 992px)
+        padding: 0 14px
+      &:first-child
+        @media only screen and (min-width: 576px)
+          padding-right: 8px
+        @media only screen and (min-width: 992px)
+          padding: 0 14px
+      &:nth-child(2n)
+        @media only screen and (min-width: 576px)
+          padding-left: 8px
+        @media only screen and (min-width: 992px)
+          padding: 0 14px
+      &:not(:last-child)
+        margin-bottom: 16px
+        @media only screen and (min-width: 992px)
+          margin-bottom: 0
+  .menu
+    border-bottom: 1px solid #EFF1F6
+    &__list
+      display: flex
+      align-items: center
+      overflow: auto
+      white-space: nowrap
+      &::-webkit-scrollbar
+        display: none
+      li
+        &:not(:last-child)
+          margin-right: 8px
+          @media only screen and (min-width: 767px)
+            margin-right: 16px
+          @media only screen and (min-width: 992px)
+            margin-right: 40px
+    &__link
+      position: relative
+      display: inline-block
+      font-size: 12px
+      line-height: 20px
+      font-weight: 400
+      text-align: center
+      color: #5068A5
+      transition: all .3s ease-in-out .1s
+      @media only screen and (min-width: 767px)
+        font-size: 14px
+      &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2px
+        background: #EA5DBB
+        transform: scaleX(0)
+        transform-origin: 100% 50%
+        transition: transform .3s cubic-bezier(.455,.03,.515,.955) .1s
+      &:hover
+        color: #EA5DBB
+        transition: all .4s ease-in-out
+        &:before
+          background: #EA5DBB
+          transform-origin: 0
+          transform: scaleX(1)
+          transition: transform .3s cubic-bezier(.455,.03,.515,.955) .1s
+.payment-col
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  overflow: hidden
+  border-radius: 8px 8px 0 0
+  &__header
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 16px 0
+    color: #fff
+    background: linear-gradient(88.34deg, #DD50DA 0%, #FF94FD 100%)
+    text-align: center
+    &-bg2
+      background: linear-gradient(88.34deg, #EB5757 0%, #FF8D8D 100%)
+    &-bg3
+      background: linear-gradient(88.34deg, #6065A7 0%, #8B91DD 100%)
+    &-title
+      font-size: 14px
+      font-weight: 600
+      text-align: center
+      @media only screen and (min-width: 576px)
+        font-size: 16px
+      @media only screen and (min-width: 992px)
+        font-size: 18px
+  &__body
+    padding: 8px
+    height: 100%
+    background: #F8F8F8
+    border-radius: 0 0 8px 8px
+    @media only screen and (min-width: 767px)
+      padding: 16px
+    @media only screen and (min-width: 1200px)
+      padding: 24px
+  &__text
+    font-size: 12px
+    font-weight: 400
+    @media only screen and (min-width: 992px)
+      font-size: 14px
+    &-color
+      font-weight: 600
+      color: #EA5DBB
+    &-bold
+      font-weight: 600
+    p
+      padding-bottom: 8px
+  &__table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    tr
+      border-bottom: 1px solid #EBEBEB
+    th
+      font-size: 10px
+      line-height: 12px
+      text-transform: uppercase
+      color: #666666
+      @media only screen and (min-width: 767px)
+        font-size: 12px
+    td
+      font-size: 12px
+      line-height: 16px
+      @media only screen and (min-width: 992px)
+        font-size: 14px
+    th,td
+      padding: 14px 0
+      padding-right: 16px
+      font-weight: 400
+
+//Сеция:"Дополнительные услоги"
+.add-services
+  &__description
+  .row-top
+    margin-bottom: 16px
+    @media only screen and (min-width: 767px)
+      margin-bottom: 24px
+    .col
+      &-top
+        margin-bottom: 16px
+        @media only screen and (min-width: 767px)
+          margin-bottom: 24px
+      &-bottom
+        margin-bottom: 16px
+        @media only screen and (min-width: 992px)
+          margin-bottom: 32px
+  .row-bottom
+    &>.col
+      &:not(:last-child)
+        margin-bottom: 16px
+        @media only screen and (min-width: 767px)
+          margin-bottom: 24px
+.services-col
+  overflow: hidden
+  border-radius: 8px
+  background: #FFF
+  .col
+    &-body
+      padding: 16px
+      @media only screen and (min-width: 767px)
+        padding: 16px 16px 24px
+      @media only screen and (min-width: 1200px)
+        padding: 30px
+        &>.row
+          height: 100%
+          &>.col
+            display: flex
+            flex-direction: column
+    &-order
+      @media only screen and (min-width: 1200px)
+        padding-left: 30px
+        .row
+          height: 100%
+    &-order-price
+      margin-bottom: 24px
+      @media only screen and (min-width: 767px)
+        display: flex
+        align-items: center
+        margin-bottom: 0
+      @media only screen and (min-width: 1200px)
+        flex-direction: column
+      &>p
+        text-align: center
+        &:not(:last-child)
+          @media only screen and (min-width: 767px)
+            margin-right: 24px
+          @media only screen and (min-width: 1200px)
+            margin-right: 0
+    &-order-btn
+      @media only screen and (min-width: 767px)
+        display: flex
+        align-items: center
+      @media only screen and (min-width: 1200px)
+        flex-direction: column
+  &__img
+    width: 100%
+    height: 100%
+    max-height: 190px
+    object-fit: cover
+    @media only screen and (min-width: 576px)
+      max-height: 320px
+    @media only screen and (min-width: 1200px)
+      height: 100%
+      max-height: none
+  &__title
+    padding-bottom: 4px
+    font-size: 16px
+    line-height: 24px
+    font-weight: 600
+    @media only screen and (min-width: 767px)
+      padding-bottom: 16px
+      font-size: 20px
+      line-height: 28px
+  &__description
+    padding-bottom: 16px
+    font-size: 12px
+    line-height: 16px
+    font-weight: 400
+    color: #666666
+    @media only screen and (min-width: 767px)
+      padding-bottom: 24px
+    @media only screen and (min-width: 1200px)
+      display: flex
+      flex: 1 1 auto
+      font-size: 14px
+      line-height: 20px
+      padding-bottom: 44px
+  &__check
+    display: flex
+    align-items: center
+    padding: 8px
+    margin-bottom: 16px
+    border-radius: 4px
+    background: #F8F8F8
+    @media only screen and (min-width: 767px)
+      padding: 16px 20px
+      margin-bottom: 24px
+    &-icon
+      margin-right: 8px
+      @media only screen and (min-width: 767px)
+        margin-right: 12px
+    &-text
+      font-size: 12px
+      line-height: 16px
+      @media only screen and (min-width: 1200px)
+        font-size: 14px
+        line-height: 20px
+  &__order
+    &-price
+      font-size: 18px
+      line-height: 24px
+      font-weight: 600
+      @media only screen and (min-width: 767px)
+        font-size: 24px
+        line-height: 30px
+      &-old
+        text-decoration: line-through
+        color: #5068A5
+    &-time
+      font-size: 12px
+      line-height: 16px
+  &__btn
+    display: flex
+    min-height: 40px
+    &:first-child
+      margin-bottom: 8px
+      @media only screen and (min-width: 767px)
+        margin-bottom: 0
+        margin-right: 16px
+      @media only screen and (min-width: 1200px)
+        margin-right: 0
+        margin-bottom: 16px
+    &:last-child
+      background: transparent
+      color: #5068A5
+      border: 1px solid #D8DCE9
+      &:hover
+        color: #fff
+        background: #5068A5
+        border-color: #5068A5

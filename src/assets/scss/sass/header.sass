@@ -1,0 +1,199 @@
+@import '../utils/libs'
+@import '../utils/reset'
+
+@import "app"
+@import 'variables'
+@import 'mixins'
+.menu-burger
+  &__body
+    position: fixed
+    top: 0
+    right: -100%
+    min-height: 100vh
+    height: 100%
+    width: 100%
+    z-index: 10
+    background: #fff
+    box-shadow:  0px 5px 10px rgba(186, 192, 209, 0.4)
+    transition: all .3s ease-in-out .1s
+    @media only screen and (min-width: 562px)
+      max-width: 320px
+    &>p
+      padding: 16px
+    &.fade-in
+      right: 0
+      transition: all .4s ease-in-out
+    &-close-icon
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding: 16px
+      svg
+        path
+          fill: #5068A5
+
+.tarif-number
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 10px 8px
+  border: 1px solid #D8DCE9
+  border-radius: 4px
+  @media only screen and (min-width: 1200px)
+    width: 100%
+    max-width: 250px
+  &__icon
+    margin-right: 4px
+  &__text
+    font-size: 12px
+    font-style: normal
+    &>span
+      display: none
+      @media only screen and (min-width: 767px)
+        display: inline-block
+.rep-balance
+  display: flex
+  align-items: center
+  padding: 6px 16px
+  border-radius: 4px
+  @media only screen and (min-width: 767px)
+    margin-right: 36px
+    border: 1px solid #D8DCE9
+  &__icon
+    margin-right: 4px
+    @media only screen and (min-width: 767px)
+      margin-right: 8px
+  &__sum
+    font-size: 12px
+    line-height: 20px
+    font-weight: 400
+    @media only screen and (min-width: 767px)
+      margin-right: 8px
+      font-size: 14px
+  &__date
+    display: none
+    margin-right: 16px
+    font-size: 12px
+    line-height: 18px
+    font-weight: 400
+    color: #666666
+    @media only screen and (min-width: 767px)
+      display: flex
+  &__btn
+    display: none
+    max-width: 99px
+    @media only screen and (min-width: 767px)
+      display: flex
+.rouble
+  font-family: 'rouble',Arial, sans-serif
+.notification
+  position: relative
+  display: none
+  align-items: center
+  justify-content: center
+  width: 44px
+  height: 44px
+  border-radius: 50%
+  background: #F4F5F8
+  @media only screen and (min-width: 1200px)
+    display: flex
+    margin-right: 40px
+  &__number
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 16px
+    height: 16px
+    font-size: 8px
+    line-height: 20px
+    font-weight: 400
+    color: #fff
+    background: #EA5DBB
+    border-radius: 50%
+.login
+  position: relative
+  display: none
+  align-items: center
+  @media only screen and (min-width: 1200px)
+    display: flex
+    margin-right: 16px
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    background: #F4F5F8
+    margin-right: 16px
+  &__user
+      &-name
+        font-size: 14px
+        line-height: 20px
+        font-weight: 400
+        margin-right: 8px
+      &-arrow
+
+        cursor: pointer
+        svg
+          transition: all .2s ease-in-out .1s
+        &.fade-in
+          svg
+            transform: rotate(180deg)
+            transition: all .3s ease-in-out
+      &-dropdown
+        position: absolute
+        top: 35px
+        right: 0
+        width: 200px
+        min-height: 100px
+        z-index: 10
+        display: none
+        padding: 16px
+        font-size: 12px
+        line-height: 16px
+        font-weight: 400
+        background: #ffffff
+        border-radius: 8px
+        box-shadow: 0px 5px 10px rgba(186, 192, 209, 0.2)
+        &.fade-in
+          display: flex
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  display: flex
+  align-items: center
+  width: 100%
+  height: $headerHeight
+  background: $headerBgColor
+  box-shadow: 0px 5px 10px rgba(186, 192, 209, 0.2)
+  &__logo
+    display: none
+    margin-right: 30px
+    @media only screen and (min-width: 767px)
+      display: flex
+    @media only screen and (min-width: 1200px)
+      display: none
+    &-mob
+      margin-right: 20px
+      @media only screen and (min-width: 767px)
+        display: none
+  &__menu-burger
+    cursor: pointer
+    @media only screen and (min-width: 992px)
+      display: none
+  .row
+    display: flex
+    align-items: center
+  .col
+    display: flex
+    align-items: center
+    height: 100%
+    &-right
+      justify-content: flex-end
